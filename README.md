@@ -1,5 +1,5 @@
-# Non production, only for testing and education created Dynamic Load Balancer with UID Routing
-## the most code and readme genereated by AI
+# Non-Production Dynamic Load Balancer with UID Routing
+## *This project is intended exclusively for testing and educational purposes. It was primarily generated using AI tools.*
 
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?logo=docker&logoColor=white)
 ![Nginx](https://img.shields.io/badge/nginx-%23009639.svg?logo=nginx&logoColor=white)
