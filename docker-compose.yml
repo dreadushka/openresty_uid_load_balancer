@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  proxy:
+    build: 
+      context: ./nginx
+    ports:
+      - "8080:80"
+    volumes:
+      - ./uids.lst:/etc/nginx/uids.lst:ro  # Монтируем файл с UID'ами
+    depends_on:
+      - app1
+      - app2
+    networks:
+      - app-network
+
+  app1:
+    build: ./app
+    environment:
+      INSTANCE_NUMBER: 1
+    networks:
+      - app-network
+
+  app2:
+    build: ./app
+    environment:
+      INSTANCE_NUMBER: 2
+    networks:
+      - app-network
+
+networks:
+  app-network:
+    driver: bridge
